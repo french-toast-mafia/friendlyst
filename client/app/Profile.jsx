@@ -11,7 +11,18 @@ const mapStateToProps = (state) => {
     posts: state.postsReducer.posts,
     user: state.userReducer.user
   }
-}
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		newUser(post) {
+			dispatch({
+				type: 'NEW_POST',
+				payload: post
+      })
+    }
+  }
+};
 
 class Profile extends Component {
   constructor(props) {
@@ -25,8 +36,8 @@ class Profile extends Component {
       newPic,
       userId: this.props.user.id
     })
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+      .then(({ data }) => newUser(data))
+      .catch(err => console.log(err))   
   }
 
   render() {
@@ -57,4 +68,4 @@ class Profile extends Component {
   }
 }
 
-export default connect(mapStateToProps)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
