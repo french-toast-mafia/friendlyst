@@ -68,7 +68,11 @@ module.exports = {
       {where: {id: req.body.userId}}
     )
       .then(data => {
-        res.status(201).send(data);
+        User.find({
+          where: {userId: req.body.userId}
+        })
+          .then(user => res.status(201).send(user))
+          .catch(err => res.status(500).send(err))
       })
       .catch(err => res.status(500).send(`Error changing profile pic ${err}`))
   })

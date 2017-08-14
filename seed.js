@@ -140,6 +140,10 @@ models.User.sync({
           {
             message: 'Fin',
             userId: 3
+          },
+          {
+            message: 'There is the tester',
+            userId: 5
           }
         ])
       })
