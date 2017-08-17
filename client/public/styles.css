@@ -429,3 +429,7 @@ body {
 .hr-style {
   border-color: #39D9C4;
 }
+
+.newsentry {
+  border: 1px solid;
+}
