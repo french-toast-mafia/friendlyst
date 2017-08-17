@@ -2,16 +2,24 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import request from 'superagent';
 import Nav from '../Nav.jsx';
+import { connect } from 'react-redux';
 
 const CLOUDINARY_UPLOAD_PRESET = 'bjotvl61';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dmbpgz4gp/image/upload';
 
-export default class AddItem extends Component {
+const mapStateToProps = (state) => {
+  return {
+    posts: state.postsReducer.posts,
+    user: state.userReducer.user
+  }
+};
+
+class AddItem extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      userId: 1,
+      userId: this.props.user.id,
       img: '',
       title: '',
       price: '',
@@ -24,6 +32,7 @@ export default class AddItem extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
     this.dropzone1 = new Dropzone("div#my-dropzone1", { url: "/api/item/dummyRoute"});
     this.dropzone1.on('addedfile', file => {
       this.onImageDrop([file]);
@@ -78,6 +87,7 @@ export default class AddItem extends Component {
   }
 
   render() {
+    {console.log(this.props)}
     return (
       <div className="container snippets edit-profile">
         <Nav />
@@ -123,3 +133,5 @@ export default class AddItem extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps)(AddItem);

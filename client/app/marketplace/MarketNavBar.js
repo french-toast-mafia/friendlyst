@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 export default class MarketNavBar extends React.Component {
   constructor(props) {
@@ -8,11 +9,12 @@ export default class MarketNavBar extends React.Component {
   render() {
     return (
       <div className="marketNavContainer">
-        <a href="/additem">
+        {/* <a href="/additem">
           <div className="additem">
             Add Item
           </div>
-        </a>
+        </a> */}
+        <Link to="/additem"><button>Click meeeee</button></Link>
       </div>
 
     )
