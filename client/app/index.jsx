@@ -18,6 +18,8 @@ import friendReducer from './reducer/friendReducer.js'
 import chatRoomReducer from './reducer/chatRoomReducer.js'
 import commentReducer from './reducer/commentReducer.js'
 import socketReducer from './reducer/socketReducer.js'
+import Marketplace from './marketplace/Marketplace.js'
+import AddItem from './marketplace/AddItem.js'
 import $ from 'jquery';
 
 const reducers = combineReducers({
@@ -43,6 +45,8 @@ render(
         <Route exact path="/notuser" component={NotUserProfile} />
         <Route exact path="/notfriend" component={NotFriendProfile} />
         <Route exact path="/friendprofile" component={FriendProfile} />
+        <Route exact path="/marketplace" component={Marketplace}/>
+        <Route exact path="/additem" component={AddItem}/>
         <Route exact path="/*" component={FriendProfileRoute} />
       </Switch>
     </BrowserRouter>
