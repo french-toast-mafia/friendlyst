@@ -10,10 +10,11 @@ var config = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
+  devtool: 'source-map',
   module : {
     loaders : [
       {
-        test : /\.jsx?/,
+        test : /\.(js|jsx)$/,
         include : APP_DIR,
         loader : 'babel-loader',
         query: {

@@ -85,7 +85,6 @@ class App extends Component {
 		auth.handleAuthentication(this.props.newUser, this.manageChat.bind(this));
 
 		setTimeout(() => {
-			if (!this.props.posts.length) {
 				let email = this.props.user.email;
 				axios.get(`api/post/getAllUserPost?email=${email}`)
 					.then(({ data }) => {
@@ -97,11 +96,12 @@ class App extends Component {
 							.catch(err => {
 								console.log(`Error getting friend posts! ${err}`);
 							})
+							console.log('these are posts', this.props.posts)
 					})
 					.catch(err => {
 						console.log(`Error getting user posts! ${err}`);
 				})
-			}
+			
 		}, 1500)
 
 		this.props.posts.sort((a, b) => b.id - a.id);

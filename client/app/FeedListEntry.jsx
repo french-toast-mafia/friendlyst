@@ -4,6 +4,7 @@ import FeedListEntryLikes from './FeedListEntryLikes.jsx';
 import FeedListEntryComments from './FeedListEntryComments.jsx';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
+import Linkify from 'react-linkify';
 
 const mapStateToProps = (state) => {
 	//state.SOMETHING is the reducer
@@ -42,6 +43,7 @@ class FeedListEntry extends Component {
 
 	componentDidMount() {
 		//get name and image links
+		
 		let id = this.props.post.userId;
 		axios.get(`api/user/getUserById?id=${id}`)
 		.then( (data) => {
@@ -65,6 +67,8 @@ class FeedListEntry extends Component {
 		.catch(err => {
 			console.log(err, 'could not get data');
 		})
+
+		
 	}
 
 	handleCommentInput(input) {
@@ -125,6 +129,7 @@ class FeedListEntry extends Component {
 	}
 
 	render() {
+		
 		return (
 			<div className="feed-entry">
 				<div>
@@ -132,7 +137,7 @@ class FeedListEntry extends Component {
 						<img src={this.state.imageLink} className="user-img" />
 						<div className="post-name">{this.state.name}</div>
 						<div className="post-time">{this.timeSince(new Date(this.props.post.createdAt))} ago</div>
-						<div className="post-message">{this.props.post.message}</div>
+						<Linkify ><div className="post-message">{this.props.post.message}</div></Linkify>
 					</div>
 				</div>
 

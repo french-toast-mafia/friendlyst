@@ -32,7 +32,7 @@ module.exports = {
             where: {
               userId: user.dataValues.id
             },
-            limit: 10,
+           
             order: [
               ['createdAt', 'ASC']
             ]
@@ -61,7 +61,7 @@ module.exports = {
                 where: {
                   userId: friends
                 },
-                limit: 10,
+                
                 order: [
                   ['createdAt', 'ASC']
                 ]
