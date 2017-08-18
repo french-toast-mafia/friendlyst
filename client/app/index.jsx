@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import App from './App.jsx'
 import LandingPage from './LandingPage.jsx'
+import Events from './Events'
 import FriendProfile from './FriendProfile.jsx'
 import FriendProfileRoute from './FriendProfileRoute.jsx'
 import Profile from './Profile.jsx'
@@ -49,9 +50,13 @@ render(
         <Route exact path="/notuser" component={NotUserProfile} />
         <Route exact path="/notfriend" component={NotFriendProfile} />
         <Route exact path="/friendprofile" component={FriendProfile} />
+
+        <Route exact path="/events" component={Events} />
+
         <Route exact path="/news" component={News} />
         <Route exact path="/marketplace" component={Marketplace}/>
         <Route exact path="/additem" component={AddItem}/>
+
         <Route exact path="/*" component={FriendProfileRoute} />
       </Switch>
     </BrowserRouter>
