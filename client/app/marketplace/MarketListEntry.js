@@ -22,7 +22,7 @@ export default class MarketListEntry extends React.Component {
   render() {
     return (
       <div className="marketListEntryContainer">
-        <img src={this.props.item.img} width="200" height="200" />
+        <img src={this.props.item.img} width="200" height="200" /> 
         <div className="marketListEntryInfo">
           <p>{this.props.item.title}</p>
           <p>{this.props.item.price}</p>
