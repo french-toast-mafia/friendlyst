@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom'
 
-export default class MarketListEntry extends React.Component {
+export default class ViewItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -22,13 +22,13 @@ export default class MarketListEntry extends React.Component {
 
   render() {
     return (
-      <div className="marketListEntryContainer">
-        <Link to="/viewitem"><img src={this.props.item.img} width="200" height="200" /></Link>
+      <div className="viewItem">
+        {/* <img src={this.props.item.img} width="200" height="200" />
         <div className="marketListEntryInfo">
           <p>{this.props.item.title}</p>
           <p>{this.props.item.price}</p>
           <p>{this.props.item.location} - {this.state.elapsedTime}</p>
-        </div>
+        </div> */}
       </div>
     )
   }
