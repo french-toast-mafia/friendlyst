@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const db = require('./db/config');
 const models = require('./db/index');
 const routes = require('./routes/index');
+const eventsRouters = require('./routes/events');
 const socket = require('socket.io');
 const PORT = process.env.PORT || 3000;
 
@@ -12,11 +13,12 @@ const app = express()
   .use(cors())
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({
-    extended: true
+    extended: false
   }))
   .use(express.static(path.resolve(__dirname, '../client/public')))
   .use('/api', routes)
-  .get('/home', (req, res) => {
+  .use('/test', eventsRouters)
+  .get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/index.html'))
   })
 

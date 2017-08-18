@@ -429,3 +429,26 @@ body {
 .hr-style {
   border-color: #39D9C4;
 }
+
+.event{
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 1px solid black;
+  color: black;
+}
+
+.desc{
+  padding-top: 10px;
+}
+
+.share{
+  margin: 10px;
+  float: right;
+  font-size: 18px;
+  background-color: #39D9C4;
+}
+
+.my-input{
+  width: 200px;
+}
