@@ -89,19 +89,11 @@ Like.sync();
 Message.sync();
 Item.sync();
 // Item.sync({force: true})
-//   .then(() => {
-//     return Item.bulkCreate([
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'iPhone 6', price: '$300', location: 'Santa Monica'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'},
-//         {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'NEW iPhone 6', price: '$400', location: 'Venice'}
-//       ])
-//    })
+  // .then(() => {
+  //   return Item.bulkCreate([
+  //       {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'iPhone 6', price: '$300', location: 'Santa Monica'}
+  //     ])
+  //  })
 
 module.exports = {
   User,
