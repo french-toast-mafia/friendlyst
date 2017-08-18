@@ -20,6 +20,8 @@ import chatRoomReducer from './reducer/chatRoomReducer.js'
 import commentReducer from './reducer/commentReducer.js'
 import newsReducer from './reducer/newsReducer.js'
 import socketReducer from './reducer/socketReducer.js'
+import Marketplace from './marketplace/Marketplace.js'
+import AddItem from './marketplace/AddItem.js'
 import $ from 'jquery';
 
 
@@ -47,7 +49,12 @@ render(
         <Route exact path="/notuser" component={NotUserProfile} />
         <Route exact path="/notfriend" component={NotFriendProfile} />
         <Route exact path="/friendprofile" component={FriendProfile} />
+<<<<<<< HEAD
         <Route exact path="/news" component={News} />
+=======
+        <Route exact path="/marketplace" component={Marketplace}/>
+        <Route exact path="/additem" component={AddItem}/>
+>>>>>>> marketplace
         <Route exact path="/*" component={FriendProfileRoute} />
       </Switch>
     </BrowserRouter>
