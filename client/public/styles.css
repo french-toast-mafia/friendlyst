@@ -563,17 +563,24 @@ sharebutton:focus,
   margin-right: auto;
 }
 
-.row {
+/*.row {
   width: 600px;
+<<<<<<< HEAD
 }
 
+=======
+}*/
+>>>>>>> changed events layout
 
 .event{
   margin-top: 30px;
   margin-left: 50px;
   margin-right: 50px;
-  border: 1px solid black;
+  border: 2px solid black;
   color: black;
+  overflow-x: auto;
+  height: 250px;
+  background-color: #eee;
 }
 
 .desc{
@@ -589,4 +596,8 @@ sharebutton:focus,
 
 .my-input{
   width: 200px;
+}
+
+.event-title{
+  color: #39D9C4;
 }
