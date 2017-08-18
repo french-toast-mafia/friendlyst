@@ -476,9 +476,14 @@ body {
   background-color: #eee;  
   border-radius: 4px;
   font-size: 14px;
-
-  border: 1px solid;
+  margin-top: 4px;
 }
+
+sharebutton:focus,
+.icon-button:focus {
+  outline: 0;
+}
+
 
 .marketListContainer {
   width: 850px;
