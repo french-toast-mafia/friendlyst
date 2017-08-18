@@ -433,6 +433,7 @@ body {
 }
 
 
+
 .event{
   margin-top: 30px;
   margin-left: 50px;
@@ -455,6 +456,7 @@ body {
 .my-input{
   width: 200px;
 
+}
 .newsentry {
 
   background-color: #eee;
@@ -561,6 +563,41 @@ sharebutton:focus,
   margin-right: auto;
 }
 
-.row {
+/*.row {
   width: 600px;
+<<<<<<< HEAD
+}
+
+=======
+}*/
+>>>>>>> changed events layout
+
+.event{
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 2px solid black;
+  color: black;
+  overflow-x: auto;
+  height: 250px;
+  background-color: #eee;
+}
+
+.desc{
+  padding-top: 10px;
+}
+
+.share{
+  margin: 10px;
+  float: right;
+  font-size: 18px;
+  background-color: #39D9C4;
+}
+
+.my-input{
+  width: 200px;
+}
+
+.event-title{
+  color: #39D9C4;
 }

@@ -7,8 +7,11 @@ router.use('/usercomment', require('./usercomment'));
 router.use('/like', require('./like'));
 router.use('/message', require('./message'));
 
+
 //router.use('/events', require('./events'));
 router.use('/item', require('./item'));
 
+
+//router.use('/events', require('./events'));
 
 module.exports = router;
