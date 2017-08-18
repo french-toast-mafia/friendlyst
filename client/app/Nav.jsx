@@ -42,7 +42,6 @@ class Nav extends Component {
     <div id="nav-bar">
       <Link to="/home" className="nav-bar-image"><img className="resize2" src="friendlystlogo.jpg" /></Link>
       <Link to="/profile"><button className="buttons">Profile</button></Link>
-      <Link to="/news"><button className="buttons">News</button></Link>
       <button className="buttons" onClick={() => auth.logout()}>Logout</button>
       <form style={{position:'relative', marginTop:'10px'}}>
         <input type="text" onChange={this.handleChange.bind(this)} style={{width:"200px"}}/>

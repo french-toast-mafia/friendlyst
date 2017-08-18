@@ -34,6 +34,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
+    "react-fontawesome": "^1.6.1",
     "react-linkify": "^0.2.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.2",
@@ -43,11 +44,13 @@
     "semantic-ui-react": "^0.71.3",
     "sequelize": "^4.4.2",
     "socket.io": "^2.0.3",
-    "socket.io-client": "^2.0.3"
+    "socket.io-client": "^2.0.3",
+    "url-loader": "^0.5.9"
   },
   "devDependencies": {
     "dotenv": "^4.0.0",
     "nodemon": "^1.11.0",
+    "url-loader": "^0.5.9",
     "webpack": "^3.4.1"
   }
 }

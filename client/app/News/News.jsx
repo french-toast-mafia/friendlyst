@@ -36,7 +36,7 @@ class News extends Component {
 
   render() {
     return (
-      <div>
+      <div className="news-box">
         <NavBar />
         <NewsList news={this.props.news}/>
       </div>

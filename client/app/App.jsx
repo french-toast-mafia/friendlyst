@@ -8,6 +8,7 @@ import Auth from '../Auth/Auth';
 import FriendList from './FriendList.jsx';
 import FriendProfileRoute from './FriendProfileRoute.jsx';
 import ChatRoomList from './ChatRoomList.jsx';
+import News from '../app/News/News.jsx';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
@@ -178,6 +179,7 @@ class App extends Component {
 		return (
 			<div>
 				<Nav />
+				<News />
 				<div className="home-page-container">
 					<textarea id="post-area" placeholder="What's on your mind?"></textarea>					
 					<div className="input-button-container"><Button bsStyle="success" onClick={this.submitPost.bind(this)}>Post</Button></div>

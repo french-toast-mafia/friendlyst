@@ -3,7 +3,7 @@ import NewsEntry from './NewsEntry.jsx';
 
 const NewsList = ({ news }) => {
   return (
-    <div>
+    <div className="newslist">
      {news.map((newsentry, i) => (
       <NewsEntry newsentry={newsentry} i={i} />
     ))}
