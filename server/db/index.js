@@ -48,6 +48,14 @@ const Message = db.define('message', {
   from: {type: Sequelize.STRING, allowNull: false},
 });
 
+const Item = db.define('item', {
+  userId: {type: Sequelize.INTEGER, allowNull: true},
+  img: { type: Sequelize.STRING, allowNull: true },
+  title: { type: Sequelize.STRING, allowNull: false },
+  price: { type: Sequelize.STRING, allowNull: true },
+  location: { type: Sequelize.STRING, allowNull: true }
+});
+
 User.belongsToMany(User, {
   as: 'buddy',
   through: Friend,
@@ -64,6 +72,9 @@ UserComment.belongsTo(User);
 User.hasMany(Like);
 Like.belongsTo(User);
 
+User.hasMany(Item);
+Item.belongsTo(User);
+
 Post.hasMany(UserComment);
 UserComment.belongsTo(Post);
 
@@ -76,6 +87,13 @@ Post.sync();
 UserComment.sync();
 Like.sync();
 Message.sync();
+Item.sync();
+// Item.sync({force: true})
+// .then(() => {
+//   return Item.bulkCreate([
+//       {userId: 1, img: 'https://pbs.twimg.com/profile_images/3046877755/d9fe496f2df2bc61c2af165fc4e14ed2.jpeg', title: 'iPhone 6', price: '$300', location: 'Santa Monica'}
+//     ])
+//  })
 
 module.exports = {
   User,
@@ -83,5 +101,6 @@ module.exports = {
   Post,
   UserComment,
   Like,
-  Message
+  Message,
+  Item
 };
