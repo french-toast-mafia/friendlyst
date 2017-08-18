@@ -45,7 +45,7 @@ class NewsEntry extends Component {
       <div className="newsentry">
         <a href={this.props.newsentry.url} target="_blank">{this.props.newsentry.title}</a>
         <br />
-        <button onClick={this.handleOnShare}>Share</button>
+        <button onClick={this.handleOnShare} className="sharebutton"><i className="fa fa-share"></i></button>
       </div>
     );
   }

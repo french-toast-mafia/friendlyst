@@ -4,6 +4,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import {apiKey} from '../../../apiKey';
 
+
 const mapStateToProps = (state) => {
 	return {
 		news: state.newsReducer.news,
@@ -29,8 +30,10 @@ class NavBar extends Component {
   }
 
   handleOnClick(e){
-    let type = e.target.name
-    axios.get(`https://newsapi.org/v1/articles?source=${type}&sortBy=top&apiKey=${apiKey}`)
+    // console.log('this is the evnets', e)
+    // let type = e.target.name
+    // console.log('this is the type', type)
+    axios.get(`https://newsapi.org/v1/articles?source=${e}&sortBy=top&apiKey=${apiKey}`)
       .then(({data}) => {
         this.props.newNews(data.articles)
       })
@@ -38,13 +41,14 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="news-nav" >
         Trending News
-        <button name="buzzfeed" onClick={this.handleOnClick}>Top Trends</button>
-        <button name="espn" onClick={this.handleOnClick}>Sports</button>
-        <button name="the-economist" onClick={this.handleOnClick}>Business</button>
-        <button name="entertainment-weekly" onClick={this.handleOnClick}>Entertainment</button>
-        <br/>
+        {/* <img src='./001-star' onClick={(e) => {this.handleOnClick('buzzfeed')}} /> */}
+        <button name="buzzfeed" onClick={(e) => {this.handleOnClick('buzzfeed')}} className="icon-button"><i className="fa fa-line-chart"></i></button>
+        <button name="espn" onClick={(e) => {this.handleOnClick('espn')}} className="icon-button"><i className="fa fa-futbol-o"></i></button>
+        <button name="the-economist" onClick={(e) => {this.handleOnClick('the-economist')}} className="icon-button"><i className="fa fa-university"></i></button>
+        <button name="entertainment-weekly" onClick={(e) => {this.handleOnClick('entertainment-weekly')}} className="icon-button"><i className="fa fa-star"></i></button>
+
       </div>
     );
   }
