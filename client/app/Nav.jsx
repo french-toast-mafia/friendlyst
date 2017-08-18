@@ -48,6 +48,11 @@ class Nav extends Component {
       <Link to="/marketplace"><button className="buttons">Market</button></Link>
       <Link to="/profile"><button className="buttons">Profile</button></Link>
 
+      <Link to="/marketplace"><button className="buttons">Market</button></Link>
+      <Link to="/profile"><button className="buttons">Profile</button></Link>
+
+      <Link to="/events"><button className="buttons">Events</button></Link>
+
       <form style={{position:'relative', marginTop:'10px'}}>
         <input type="text" onChange={this.handleChange.bind(this)} style={{width:"200px"}}/>
         <Link to={"/" + this.props.friend}><input className="nav-bar-magnifier"type="image" src="https://cdn0.iconfinder.com/data/icons/basic-lines/39/search-512.png" style={{height:'18px',width:'18px',position:'absolute', top:'3px'}} /></Link>

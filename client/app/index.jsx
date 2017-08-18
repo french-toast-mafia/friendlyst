@@ -53,9 +53,12 @@ render(
 
         <Route exact path="/events" component={Events} />
 
+
         <Route exact path="/news" component={News} />
         <Route exact path="/marketplace" component={Marketplace}/>
         <Route exact path="/additem" component={AddItem}/>
+
+        <Route exact path="/events" component={Events} />
 
         <Route exact path="/*" component={FriendProfileRoute} />
       </Switch>
