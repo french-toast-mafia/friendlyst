@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
   font-family: sans-serif;
   background: url('http://kaba35.com/wp-content/uploads/2015/11/Savin-NY-Website-Background-Web1.jpg') no-repeat center center fixed;
@@ -432,4 +434,61 @@ body {
 
 .newsentry {
   border: 1px solid;
+}
+
+.marketListContainer {
+  width: 850px;
+  margin: 0 auto;
+}
+
+.marketListEntryContainer {
+  display: inline-block;
+  width: 200px;
+  margin: 6px;
+}
+
+.marketListEntryInfo {
+  width: 100%;
+  margin: 0;
+  background-color: #DCDCDC;
+  color: black;
+  padding-left: 12px;
+  padding-top: 10px;
+  overflow: hidden;
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+  white-space: nowrap;
+}
+
+.marketNavContainer {
+  width: 850px;
+  margin-top: 65px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  background-color: #adb4c4;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.additem {
+  background-color: #39d9c4;
+  width: 20%;
+  text-align: center;
+  float: right;
+  line-height: 2.5;
+  margin-right: 7px;
+  margin-top: 7px;
+  color: white;
+  text-decoration: none;
+}
+
+.edit-profile {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  width: 600px;
 }
