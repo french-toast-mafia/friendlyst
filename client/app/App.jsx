@@ -8,6 +8,7 @@ import Auth from '../Auth/Auth';
 import FriendList from './FriendList.jsx';
 import FriendProfileRoute from './FriendProfileRoute.jsx';
 import ChatRoomList from './ChatRoomList.jsx';
+import News from '../app/News/News.jsx';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
@@ -85,7 +86,6 @@ class App extends Component {
 		auth.handleAuthentication(this.props.newUser, this.manageChat.bind(this));
 
 		setTimeout(() => {
-			if (!this.props.posts.length) {
 				let email = this.props.user.email;
 				axios.get(`api/post/getAllUserPost?email=${email}`)
 					.then(({ data }) => {
@@ -97,11 +97,12 @@ class App extends Component {
 							.catch(err => {
 								console.log(`Error getting friend posts! ${err}`);
 							})
+							console.log('these are posts', this.props.posts)
 					})
 					.catch(err => {
 						console.log(`Error getting user posts! ${err}`);
 				})
-			}
+			
 		}, 1500)
 
 		this.props.posts.sort((a, b) => b.id - a.id);
@@ -178,6 +179,7 @@ class App extends Component {
 		return (
 			<div>
 				<Nav />
+				<News />
 				<div className="home-page-container">
 					<textarea id="post-area" placeholder="What's on your mind?"></textarea>					
 					<div className="input-button-container"><Button bsStyle="success" onClick={this.submitPost.bind(this)}>Post</Button></div>

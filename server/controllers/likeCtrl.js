@@ -8,7 +8,7 @@ module.exports = {
       where: {
         postId: req.query.postId
       },
-      limit: 10,
+      
       order: [
         ['createdAt', 'ASC']
       ]

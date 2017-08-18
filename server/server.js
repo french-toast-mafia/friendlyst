@@ -17,7 +17,9 @@ const app = express()
   }))
   .use(express.static(path.resolve(__dirname, '../client/public')))
   .use('/api', routes)
+
   .use('/test', eventsRouters)
+
   .get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/index.html'))
   })
