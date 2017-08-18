@@ -55,7 +55,6 @@ class AddItem extends Component {
 
       if (response.body.secure_url !== '') {
         this.setState({
-          uploadedCloudinaryUrl: response.body.secure_url,
           img: response.body.secure_url
         });
       }
@@ -74,7 +73,6 @@ class AddItem extends Component {
     .then(response => {
       
       this.setState({
-        userId: '',
         img: '',
         title: '',
         price: '',
