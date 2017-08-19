@@ -23,6 +23,7 @@ import newsReducer from './reducer/newsReducer.js'
 import socketReducer from './reducer/socketReducer.js'
 import Marketplace from './marketplace/Marketplace.js'
 import AddItem from './marketplace/AddItem.js'
+import ViewItem from './marketplace/ViewItem.js'
 import $ from 'jquery';
 
 
@@ -50,16 +51,11 @@ render(
         <Route exact path="/notuser" component={NotUserProfile} />
         <Route exact path="/notfriend" component={NotFriendProfile} />
         <Route exact path="/friendprofile" component={FriendProfile} />
-
         <Route exact path="/events" component={Events} />
-
-
         <Route exact path="/news" component={News} />
         <Route exact path="/marketplace" component={Marketplace}/>
         <Route exact path="/additem" component={AddItem}/>
-
-        <Route exact path="/events" component={Events} />
-
+        <Route exact path="/viewitem" component={ViewItem}/>
         <Route exact path="/*" component={FriendProfileRoute} />
       </Switch>
     </BrowserRouter>

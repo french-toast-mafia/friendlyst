@@ -565,12 +565,77 @@ sharebutton:focus,
 
 /*.row {
   width: 600px;
-<<<<<<< HEAD
+}*/
+
+.overlay{
+  background-color:rgba(50, 50, 50, .8);
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:999;
 }
 
-=======
-}*/
->>>>>>> changed events layout
+.modalContainer {
+  position: fixed;
+  background-color: white;
+  width: 800px;
+  height: 400px;
+  top: 200px;
+  left: 22%; 
+  z-index: 1000;
+  border-radius: 6px;
+}
+
+.modalImage {
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+}
+
+.modalInfo {
+  display: inline-block;
+  vertical-align: top;
+  height: 400px;
+  width: 400px;
+  color: black;
+  font-size: 2em;
+  padding: 15px;
+}
+
+.modalPrice {
+  font-size: 20px;
+  position: absolute;
+  top: 52px;
+}
+
+.modalLocation {
+  position: absolute;
+  bottom: 10px;
+  font-size: 16px;
+  color: gray;
+  left: 420px;
+}
+
+.close {
+    color: gray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalDescription {
+  font-size: 18px;
+  margin-top: 45px;
+}
 
 .event{
   margin-top: 30px;
