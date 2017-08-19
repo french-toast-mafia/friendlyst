@@ -30,6 +30,7 @@ export default class ViewItem extends React.Component {
             <span className="close">&times;</span>
             <p>{this.props.item.title}</p>
             <span className="modalPrice">{this.props.item.price}</span>
+            <p className="modalDescription">{this.props.item.description}</p>
             <span className="modalLocation">{this.props.item.location} - {this.state.elapsedTime}</span>
           </div>
         </div>

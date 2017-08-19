@@ -9,6 +9,7 @@ module.exports = {
       title: req.body.title,
       price: req.body.price,
       location: req.body.location,
+      description: req.body.description,
       userId: req.body.userId
     })
     .then(item => res.status(201).send(item))

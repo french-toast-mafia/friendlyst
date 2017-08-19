@@ -23,7 +23,8 @@ class AddItem extends Component {
       img: '',
       title: '',
       price: '',
-      location: 'Los Angeles'
+      location: '',
+      description: ''
     }
 
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -32,7 +33,6 @@ class AddItem extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
     this.dropzone1 = new Dropzone("div#my-dropzone1", { url: "/api/item/dummyRoute"});
     this.dropzone1.on('addedfile', file => {
       this.onImageDrop([file]);
@@ -76,7 +76,8 @@ class AddItem extends Component {
         img: '',
         title: '',
         price: '',
-        location: ''
+        location: '',
+        description: ''
       })
     })
     .catch(err => { 
@@ -85,7 +86,6 @@ class AddItem extends Component {
   }
 
   render() {
-    {console.log(this.props)}
     return (
       <div className="container snippets edit-profile">
         <Nav />
@@ -107,6 +107,18 @@ class AddItem extends Component {
                     <label className="col-sm-2 control-label">Price</label>
                     <div className="col-sm-10">
                       <input name="price" onChange={this.handleOnChange} type="text" className="form-control"/>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label className="col-sm-2 control-label">Location</label>
+                    <div className="col-sm-10">
+                      <input name="location" onChange={this.handleOnChange} type="text" className="form-control"/>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label className="col-sm-2 control-label">Desc.</label>
+                    <div className="col-sm-10">
+                      <textarea rows="4" name="description" onChange={this.handleOnChange} type="text" className="form-control"/>
                     </div>
                   </div>
                   <div className="form-group">

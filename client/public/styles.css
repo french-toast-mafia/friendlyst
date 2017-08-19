@@ -558,7 +558,7 @@ sharebutton:focus,
   width: 800px;
   height: 400px;
   top: 200px;
-  left: 200px; 
+  left: 22%; 
   z-index: 1000;
   border-radius: 6px;
 }
@@ -605,4 +605,9 @@ sharebutton:focus,
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modalDescription {
+  font-size: 18px;
+  margin-top: 45px;
 }
