@@ -11,7 +11,6 @@ export default class MarketNavBar extends React.Component {
       <div className="marketNavContainer">
         <Link to="/additem"><div className="additem">+ Add Item</div></Link>
       </div>
-
     )
   }
 }

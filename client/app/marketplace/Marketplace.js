@@ -5,8 +5,8 @@ import Nav from '../Nav.jsx';
 import axios from 'axios';
 
 export default class MarketPlace extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     
     this.state = {
       itemList: []
@@ -32,9 +32,9 @@ export default class MarketPlace extends React.Component {
   render() {
     return (
       <div>
-        <Nav /> 
+        <Nav />  
         <MarketNavBar />
-        <MarketList itemList={this.state.itemList}/> 
+        <MarketList itemList={this.state.itemList} />   
       </div>
     )
   }

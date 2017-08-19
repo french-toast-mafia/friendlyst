@@ -8,7 +8,7 @@ export default class ViewItem extends React.Component {
     this.state = {
       elapsedTime: ''
     }
-    this.handleClick = this.handleClick.bind(this);
+    this.onClose = this.onClose.bind(this)
   }
 
   componentDidMount() {
@@ -16,19 +16,23 @@ export default class ViewItem extends React.Component {
     this.setState({ elapsedTime })
   }
 
-  handleClick() {
-    console.log('handleClick invoked!')
+  onClose() {
+    this.props.toggleModal()
   }
 
   render() {
     return (
-      <div className="viewItem">
-        {/* <img src={this.props.item.img} width="200" height="200" />
-        <div className="marketListEntryInfo">
-          <p>{this.props.item.title}</p>
-          <p>{this.props.item.price}</p>
-          <p>{this.props.item.location} - {this.state.elapsedTime}</p>
-        </div> */}
+
+      <div className="overlay">
+        <div className="modalContainer">
+          <img className="modalImage" src={this.props.item.img} />
+          <div className="modalInfo">
+            <span className="close">&times;</span>
+            <p>{this.props.item.title}</p>
+            <span className="modalPrice">{this.props.item.price}</span>
+            <span className="modalLocation">{this.props.item.location} - {this.state.elapsedTime}</span>
+          </div>
+        </div>
       </div>
     )
   }
