@@ -130,7 +130,7 @@ class AddItem extends Component {
                   </div>
                   <div className="form-group">
                     <div className="col-sm-10 col-sm-offset-2">
-                      <a href="/marketplace"><button type="submit" onClick={this.handleOnUpdate} className="btn btn-primary">Submit</button></a>
+                      <button type="submit" onClick={this.handleOnUpdate} className="btn btn-primary">Submit</button>
                       <button type="reset" className="btn btn-default">Cancel</button>
                     </div>
                   </div>
